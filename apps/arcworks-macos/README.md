@@ -16,6 +16,27 @@ that library into the application. Rust must therefore be installed through `rus
 
 A verified local Release build is also placed at `dist/ArcWorks.app` from the repository root.
 
+## Updating the CADCraft engine
+
+The Git remotes deliberately have separate responsibilities:
+
+- `origin` is the ArcWorks fork at `doobox/cadcraft`; `arcworks/main` is its protected working branch.
+- `upstream` is the official `storytold/cadcraft` repository and is fetch-only.
+
+Import each upstream release on an integration branch rather than directly on `arcworks/main`:
+
+```sh
+git fetch upstream --tags --prune
+git switch arcworks/main
+git switch -c update/cadcraft-vX.Y.Z
+git merge --no-ff vX.Y.Z -m "merge: update CadCraft engine to vX.Y.Z"
+cargo test -p arcworks-bridge
+xcodebuild -project apps/arcworks-macos/ArcWorks.xcodeproj -scheme ArcWorks -configuration Debug build
+```
+
+After both builds pass, push the integration branch, fast-forward `arcworks/main`, and tag the
+verified compatibility point as `arcworks-cadcraft-vX.Y.Z`.
+
 ## Current vertical slice
 
 - Native CAD workspace shell with a compact unified toolbar, docked tool and property palettes, floating command line, and bottom model/status strip.
