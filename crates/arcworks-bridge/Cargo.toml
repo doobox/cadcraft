@@ -1,0 +1,20 @@
+[package]
+name = "arcworks-bridge"
+description = "C-compatible bridge from the ArcWorks macOS app to the CADCraft Rust engine"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = ["staticlib"]
+
+[dependencies]
+cadcraft-color = { workspace = true }
+cadcraft-doc = { workspace = true }
+cadcraft-engine = { workspace = true }
+cadcraft-geom = { workspace = true }
+cadcraft-io = { workspace = true }
+cadcraft-render = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+

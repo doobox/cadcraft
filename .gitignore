@@ -6,6 +6,8 @@
 /log/
 /temp/
 .DS_Store
+xcuserdata/
+*.xcuserstate
 *.swp
 /apps/cadcraft-web/dist/
 /.claude/worktrees/

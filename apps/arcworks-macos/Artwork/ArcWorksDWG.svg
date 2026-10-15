@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <path d="M198 70h426l202 202v682H198Z" fill="#F8FBFF" stroke="#B8C7DC" stroke-width="26"/>
+  <path d="M624 70v202h202" fill="#DDEAF8" stroke="#B8C7DC" stroke-width="26" stroke-linejoin="round"/>
+  <rect x="198" y="610" width="628" height="222" fill="#1649C6"/>
+  <text x="512" y="766" font-family="Helvetica Neue,Arial,sans-serif" font-size="138" font-weight="700" text-anchor="middle" fill="white">DWG</text>
+  <path d="M301 486c89-143 278-184 423-96" fill="none" stroke="#20AEE8" stroke-width="30" stroke-linecap="round"/>
+  <circle cx="301" cy="486" r="22" fill="#1649C6"/>
+  <circle cx="724" cy="390" r="22" fill="#1649C6"/>
+</svg>

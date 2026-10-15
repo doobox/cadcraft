@@ -1,0 +1,5 @@
+module ArcWorksBridge {
+    header "arcworks_bridge.h"
+    export *
+}
+
